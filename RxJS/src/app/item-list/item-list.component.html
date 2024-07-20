@@ -1,0 +1,6 @@
+<h2>Item List</h2>
+<ul>
+    <li *ngFor="let item of (items$ | async)">{{ item }}</li>
+</ul>
+<p>Total Items: {{ itemCount$ | async }}</p>
+<button (click)="clearItems()">Clear All</button>

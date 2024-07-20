@@ -1,0 +1,14 @@
+<div class="card" [ngStyle]="{'background-color': cardBackgroundColor}" [ngClass]="{'highlighted': isHighlighted}">
+    <img [src]="imageUrl" alt="Example Image" class="card-img-top">
+    <div class="card-body">
+        <h5 class="card-title">{{ message }}</h5>
+        <p class="card-text">This is an example of property binding.</p>
+        <p>
+            <!-- Two-way Binding -->
+            <label for="userMessage">Your Message:</label>
+            <input id="userMessage" [(ngModel)]="userMessage" placeholder="Enter your message">
+        </p>
+        <p>Your message is: {{ userMessage }}</p>
+        <button (click)="toggleHighlight()">Toggle Highlight</button>
+    </div>
+</div>

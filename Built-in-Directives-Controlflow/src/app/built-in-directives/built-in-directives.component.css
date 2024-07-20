@@ -1,0 +1,16 @@
+.color-box {
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+
+.red {
+    background-color: red;
+    color: white;
+}
+
+.blue {
+    background-color: blue;
+    color: white;
+}
