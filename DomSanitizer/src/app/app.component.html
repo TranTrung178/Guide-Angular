@@ -1,0 +1,14 @@
+<div class="container">
+  <h1>DomSanitizer Example</h1>
+
+  <div [innerHtml]="safeHtml" class="safe-html">
+  </div>
+
+  <a [href]="safeUrl" class="safe-url">Go to Example</a>
+
+  <div [ngStyle]="{ 'background-color': safeStyle }" class="safe-style">
+    This div has a safe background color.
+  </div>
+
+  <iframe [src]="safeResourceUrl" class="safe-resource-url" width="600" height="400"></iframe>
+</div>

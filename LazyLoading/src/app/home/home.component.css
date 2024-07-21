@@ -1,0 +1,16 @@
+.home-container {
+    text-align: center;
+    padding: 20px;
+    background-color: #f0f8ff;
+    border-radius: 8px;
+}
+
+.home-header {
+    font-size: 2rem;
+    color: #333;
+}
+
+.home-description {
+    font-size: 1.2rem;
+    color: #666;
+}

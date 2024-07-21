@@ -1,0 +1,16 @@
+.user-container {
+    text-align: center;
+    padding: 20px;
+    background-color: #e6e6fa;
+    border-radius: 8px;
+}
+
+.user-header {
+    font-size: 2rem;
+    color: #333;
+}
+
+.user-info {
+    font-size: 1.2rem;
+    color: #444;
+}

@@ -1,0 +1,16 @@
+.not-found-container {
+    text-align: center;
+    padding: 20px;
+    background-color: #ffdddd;
+    border-radius: 8px;
+}
+
+.not-found-header {
+    font-size: 2rem;
+    color: #a00;
+}
+
+.not-found-description {
+    font-size: 1.2rem;
+    color: #666;
+}

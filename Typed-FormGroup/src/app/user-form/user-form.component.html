@@ -1,0 +1,16 @@
+<form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+    <label for="name">Name:</label>
+    <input id="name" formControlName="name" />
+    <small *ngIf="userForm.controls['name'].errors?.['required']">Name is required.</small>
+
+    <label for="email">Email:</label>
+    <input id="email" formControlName="email" />
+    <small *ngIf="userForm.controls['email'].errors?.['required']">Email is required.</small>
+    <small *ngIf="userForm.controls['email'].errors?.['email']">Email is invalid.</small>
+
+    <label for="age">Age:</label>
+    <input id="age" type="number" formControlName="age" />
+    <small *ngIf="userForm.controls['age'].errors?.['required']">Age is required.</small>
+
+    <button type="submit">Submit</button>
+</form>

@@ -1,0 +1,22 @@
+<form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+    <div formArrayName="users">
+        <div *ngFor="let user of users.controls; let i = index" [formGroupName]="i">
+            <label for="name">Name</label>
+            <input id="name" formControlName="name" />
+            <div *ngIf="user.get('name')?.invalid && (user.get('name')?.dirty || user.get('name')?.touched)">
+                <small *ngIf="user.get('name')?.errors?.['required']">Name is required.</small>
+            </div>
+
+            <label for="email">Email</label>
+            <input id="email" formControlName="email" />
+            <div *ngIf="user.get('email')?.invalid && (user.get('email')?.dirty || user.get('email')?.touched)">
+                <small *ngIf="user.get('email')?.errors?.['required']">Email is required.</small>
+                <small *ngIf="user.get('email')?.errors?.['email']">Email is invalid.</small>
+            </div>
+
+            <button type="button" (click)="removeUser(i)">Remove</button>
+        </div>
+    </div>
+    <button type="button" (click)="addUserToForm()">Add User</button>
+    <button type="submit" [disabled]="userForm.invalid">Submit</button>
+</form>

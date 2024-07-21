@@ -1,0 +1,24 @@
+.container {
+    text-align: center;
+    padding: 20px;
+}
+
+.safe-html {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.safe-url {
+    display: block;
+    margin: 10px 0;
+}
+
+.safe-style {
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.safe-resource-url {
+    border: 1px solid #ddd;
+}

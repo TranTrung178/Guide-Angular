@@ -1,0 +1,52 @@
+<form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+    <div>
+        <label for="name">Name</label>
+        <input id="name" formControlName="name" />
+        <div
+            *ngIf="userForm.controls['name'].invalid && (userForm.controls['name'].dirty || userForm.controls['name'].touched)">
+            <small *ngIf="userForm.controls['name'].errors?.['required']">Name is required.</small>
+            <small *ngIf="userForm.controls['name'].errors?.['minlength']">Name must be at least 3 characters
+                long.</small>
+        </div>
+    </div>
+
+    <div>
+        <label for="email">Email</label>
+        <input id="email" formControlName="email" />
+        <div
+            *ngIf="userForm.controls['email'].invalid && (userForm.controls['email'].dirty || userForm.controls['email'].touched)">
+            <small *ngIf="userForm.controls['email'].errors?.['required']">Email is required.</small>
+            <small *ngIf="userForm.controls['email'].errors?.['email']">Email must be a valid email address.</small>
+        </div>
+    </div>
+
+    <div>
+        <label for="password">Password</label>
+        <input id="password" type="password" formControlName="password" />
+        <div
+            *ngIf="userForm.controls['password'].invalid && (userForm.controls['password'].dirty || userForm.controls['password'].touched)">
+            <small *ngIf="userForm.controls['password'].errors?.['required']">Password is required.</small>
+            <small *ngIf="userForm.controls['password'].errors?.['minlength']">Password must be at least 6 characters
+                long.</small>
+        </div>
+    </div>
+
+    <div>
+        <label for="confirmPassword">Confirm Password</label>
+        <input id="confirmPassword" type="password" formControlName="confirmPassword" />
+        <div *ngIf="userForm.errors?.['passwordMismatch']">
+            <small>Passwords must match.</small>
+        </div>
+    </div>
+
+    <div>
+        <label for="birthdate">Birthdate</label>
+        <input id="birthdate" type="date" formControlName="birthdate" />
+        <div
+            *ngIf="userForm.controls['birthdate'].invalid && (userForm.controls['birthdate'].dirty || userForm.controls['birthdate'].touched)">
+            <small *ngIf="userForm.controls['birthdate'].errors?.['required']">Birthdate is required.</small>
+        </div>
+    </div>
+
+    <button type="submit" [disabled]="userForm.invalid">Submit</button>
+</form>
